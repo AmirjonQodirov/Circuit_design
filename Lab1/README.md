@@ -7,11 +7,15 @@
 
 В рамках работы также производится знакомство с принципами проектирования схем на вентильном уровне с использованием языка описания аппаратуры Verilog HDL.
 
+### Вариант 5
+
+
 ![Тесты](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/1.PNG)
 
-![Тесты](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/2.PNG)
+![](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/2.PNG)
 
-![Тесты](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/3.PNG)
+![](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/3.PNG)
 
-![Тесты](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/4.PNG)
+![](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/4.PNG)
 
+![Схема](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/%D1%81%D1%85%D0%B5%D0%BC%D0%B0.png)
