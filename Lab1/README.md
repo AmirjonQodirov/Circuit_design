@@ -18,11 +18,14 @@
 
 Схема
 ![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab1/images/%D1%81%D1%85%D0%B5%D0%BC%D0%B0.png)
+
 Тесты
 ![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab1/images/1.PNG)
 ![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab1/images/2.PNG)
+
 Временная диаграмма
 ![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab1/images/3.PNG)
+
 Ресурсы fpga
 ![](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab1/images/4.PNG)
 
