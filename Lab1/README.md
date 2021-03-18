@@ -17,6 +17,8 @@
 #### Мы использовали в общем 11 двоичных сумматоров 
 ![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab1/images/11.PNG)
 
+![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab1/images/sumDiag.png)
+
 **Схема**
 ![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab1/images/%D1%81%D1%85%D0%B5%D0%BC%D0%B0.png)
 
