@@ -18,11 +18,11 @@
 
 **Ресурсы fpga**
 
-![](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab2/img/2.PNG)
+![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab2/img/2PNG)
 
 **Схема**
 
-![](https://github.com/MansurovB-source/Circuit_design/blob/main/Lab2/img/4.PNG)
+![](https://github.com/mirjonQodirov/Circuit_design/blob/main/Lab2/img/3.PNG)
 
 
 #### Вывод
