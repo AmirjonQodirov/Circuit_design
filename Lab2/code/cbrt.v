@@ -5,7 +5,7 @@ module cbrt (
 	input rst_i ,
 	input [7 : 0] a_bi,
 	output busy_o,
-	output reg [2 : 0] y_bo
+	output reg [3 : 0] y_bo
 );
 
 	localparam IDLE = 3'b000;
@@ -19,8 +19,8 @@ module cbrt (
 
 	reg [7 : 0] a;
 
-	reg [2 : 0] r, m;
-	reg [7 : 0] t;
+	reg [3 : 0] r, m;
+	reg [7 : 0] n, p;
 
 	reg [2 : 0] state;
 	reg [2 : 0] state_next;
@@ -62,7 +62,7 @@ module cbrt (
     always @(posedge clk_i) begin
         if (rst_i) begin
             a <= a_bi;
-            t <= 0;
+            p <= 0;
             r <= 4;
             m <= 4;
             y_bo <= 0;
@@ -71,16 +71,14 @@ module cbrt (
 	        case (state)
 	            IDLE:
 	                begin
-	                   if(r<=1 ) begin
-	                       y_bo <= r;
-                       end
-                       else begin
-                           y_bo <= r-1;
-                       end
+                        y_bo <= r << 1;
+                        if(p==1) begin
+                            y_bo <= (r-1)<<1;
+                        end
 	                end
 	            STATE1:
 	                begin
-	                   y_bo <= r-1;
+	                   y_bo <= r;
 	                   if (|m) begin
 	                       mult2_reset <= 1;
 	                       mult2_i1 <= r;
@@ -103,12 +101,22 @@ module cbrt (
 	                    if (!mult2_busy) begin
 	                        if (a == mult2_out) begin
 	                            m <= 0;
-
 	                        end else if (a < mult2_out) begin
 	                            r <= r - m;
 	                        end else begin
 	                            r <= r + m;
 	                        end
+                            if(a<125) 
+                                begin 
+                                    if(a>64) begin
+                                        p<=1; end
+                                end
+                                
+                            if(a<27) 
+                                begin 
+                                    if(a>8) begin
+                                        p<=1; end
+                                end
 	                    end
 	                end
 	            STATE4:
