@@ -13,6 +13,9 @@ module cbrt (
 	localparam STATE2 = 3'b010;
 	localparam STATE3 = 3'b011;
 	localparam STATE4 = 3'b100;
+	localparam STATE5 = 3'b101;
+	localparam STATE6 = 3'b110;
+	localparam STATE7 = 3'b111;
 
 	reg [7 : 0] a;
 
@@ -68,11 +71,21 @@ module cbrt (
 	        case (state)
 	            IDLE:
 	                begin
-                        y_bo <= r;
+	                   if(r<=1 ) begin
+	                       y_bo <= r;
+                       end
+                       else begin
+                           y_bo <= r-1;
+                       end
 	                end
 	            STATE1:
 	                begin
-	                   y_bo <= r;
+	                   if(r<=1 ) begin
+	                       y_bo <= r;
+                       end
+                       else begin
+                           y_bo <= r-1;
+                       end
 	                   if (|m) begin
 	                       mult2_reset <= 1;
 	                       mult2_i1 <= r;
@@ -95,10 +108,11 @@ module cbrt (
 	                    if (!mult2_busy) begin
 	                        if (a == mult2_out) begin
 	                            m <= 0;
-	                        end else if (a <= mult2_out) begin
-	                            r = r - m;
+
+	                        end else if (a < mult2_out) begin
+	                            r <= r - m;
 	                        end else begin
-	                            r = r + m;
+	                            r <= r + m;
 	                        end
 	                    end
 	                end
