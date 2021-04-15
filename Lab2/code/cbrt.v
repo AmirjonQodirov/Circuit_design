@@ -80,12 +80,7 @@ module cbrt (
 	                end
 	            STATE1:
 	                begin
-	                   if(r<=1 ) begin
-	                       y_bo <= r;
-                       end
-                       else begin
-                           y_bo <= r-1;
-                       end
+	                   y_bo <= r-1;
 	                   if (|m) begin
 	                       mult2_reset <= 1;
 	                       mult2_i1 <= r;
