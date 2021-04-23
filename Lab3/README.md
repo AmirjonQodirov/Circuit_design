@@ -28,7 +28,7 @@
 
 **Схема подключения дискретных портов**
 
-![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab3/img/nexsys.PNG)
+![](https://github.com/AmirjonQodirov/Circuit_design/blob/main/Lab3/img/nexys.PNG)
 
 
 #### Вывод
